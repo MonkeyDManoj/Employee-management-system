@@ -1,0 +1,141 @@
+{% from 'alllink.html' import alllinks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System profile</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='single.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='date.png')}}">
+</head>
+
+<body>
+    <div class="background">
+        <div class="logo">
+
+            <div class="links">
+
+                {{ alllinks() }}
+            </div>
+        </div>
+
+        <div class="page">
+            <div>
+                <div class='page2'>
+                    {% if user %}
+                    <h3>User : {{user['name']}}</h3>
+                    <h4><a href="{{url_for('logout')}}">Logout</a></h4>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="page1">
+                <h4><a href="{{url_for('dashboard')}}">View All Employee</a></h4>
+                <h4><a href="{{url_for('addnewemployee')}}">Add New Employee</a></h4>
+            </div>
+            <div class="box-main">
+            <div class="single">
+                <div>
+                    <img class="zoro" src="{{url_for('static', filename = 'imge.png')}}">
+                </div>
+                <div class="table">
+                    <caption>
+                        <h3 style= "margin-top: 10px;
+                        margin-bottom: 10px;">Employee Details</h3>
+                    </caption>
+                    <div class="listt">
+                        {% if profile %}
+                        <ul>
+
+                            <li>
+                                <div class="margin">
+                                    <h4>Full Name : {{profile['name']}} </h4>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="margin">
+                                    <h4>Phone : {{profile['phone']}}</h4>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="margin">
+                                    <h4>Email : {{profile['email']}}</h4>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="margin">
+                                    <h4>Address : {{profile['address']}}</h4>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <div class="margin">
+                                    <h4>Joining Date : {{profile['joining_date']}}</h4>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="margin">
+                                    <div>
+                                        <h4>Total Projects Handled : {{profile['total_projects_handled']}}</h4>
+                                    </div>
+                                    <p class="adb">Websites and Mobile apps.</p>
+                                </div>
+
+                            </li>
+
+                            <li>
+                                <div class="margin">
+                                    <div>
+                                        <h4>Total Test Cases : {{profile['total_test_cases']}}</h4>
+                                    </div>
+                                    <p class="adb">Total test case written and reviewed.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="margin">
+                                    <div>
+                                        <h4>Total Defects Completed : {{profile['total_defects']}}</h4>
+                                    </div>
+                                    <p class="adb">defects found and rectified so far.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="margin">
+                                    <div>
+                                        <h4>Total Defects Pending : {{profile['total_defects_pending']}}</h4>
+                                    </div>
+                                    <p class="adb">Total defects pending for next release.</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div>
+            <p>copyright © Desiged and Deployed by Manoj Nagarajan Email: manojnagarajan355.gmail.com
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

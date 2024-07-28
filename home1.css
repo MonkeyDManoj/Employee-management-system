@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.logo {
+    display: flex;
+    padding: 10px;
+    margin-left: 20px
+}
+
+.links {
+    margin-left: 70%;
+    margin-top: 20px;
+
+}
+
+.links ul li {
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
+    color: #FB9D98;
+
+}
+
+.links ul li a {
+    color: #FACCB0;
+}
+
+.links ul li :hover {
+    color: #FE4166;
+    ;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    padding: 20px;
+}
+
+.page1 {
+    display: inline-block;
+}
+
+.page1 h3 {
+    margin-left: 700px;
+}
+
+
+
+
+.main {
+    padding: 20px;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bolder;
+    margin-right: 100px;
+    color: #C8C6A7;
+
+}
+
+.bottom p {
+    background: linear-gradient(to right, #FE4166, #84AF9B);
+    color: purple;
+    text-align: center;
+    font-size: small;
+    padding: 10px;
+
+}
+
+.login h3 {
+    margin-bottom: 10px;
+
+}
+
+.login {
+    position: absolute;
+    right: 0.1px;
+    padding: 40px;
+    margin-left: 310px;
+    margin-right: 60px;
+    background-color: aliceblue;
+    display: inline-block;
+    border-radius: 25px;
+
+
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.emailbar {
+
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.bar {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #84AF9B;
+    color: #FE4166;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 20px;
+
+
+}
+
+button:hover {
+    background-color: #FE4166;
+    color: #FACCB0;
+    transition: 0.4s;
+}
+
+
+.background {
+    background: url(front.jpg);
+    width: 100%;
+    height: 95vh;
+}
+
+.home {
+    position: absolute;
+    left: 265px;
+    top: 250px
+}
+
+.register {
+    position: absolute;
+    left: 555px;
+    top: 370px
+}
+
+.login-1 {
+    position: absolute;
+    left: 410px;
+    top: 310px;
+}
+
+.home a,
+.login-1 a,
+.register a {
+    color: black;
+}
+
+.login p {
+    font-size: x-small;
+}
+
+.lable-l {
+    color: #84AF9B;
+}
+
+.home a:hover,
+.login-1 a:hover,
+.register a:hover {
+    color: #84AF9B;
+}

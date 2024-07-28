@@ -1,0 +1,87 @@
+{% from 'alllink.html' import alllinks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System update Employee</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dashboard.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='date.png')}}">
+</head>
+
+<body>
+    <div class="background-u">
+
+
+        <div class="logo">
+
+            <div class="links-1">
+                {{ alllinks() }}
+            </div>
+        </div>
+
+        <div class="page">
+            <div>
+                <div class='page2'>
+                    {% if user %}
+                    <h3>User : {{user['name']}}</h3>
+                    <h4><a href="{{url_for('logout')}}">Logout</a></h4>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="box-main">
+            <div class="page1">
+                <h4><a href="{{url_for('dashboard')}}">View All Employee</a></h4>
+                <h4><a href="{{url_for('addnewemployee')}}">Add New Employee</a></h4>
+            </div>
+
+            <div class='login-1'>
+                <h3 class="letter">Employee Details</h3>
+                {% if profile %}
+                <form action="/update" method="POST">
+                    <hr style="margin-bottom: 20px;">
+                    <div>
+                        <label class="letter" style="margin-top: 10px;">EMPID</label><br>
+                        <input type="text" class="emailbar-1" name="empid" value="{{profile['empid']}}" readonly><br>
+                    </div>
+                    <div>
+                        <label class="letter" style="margin-top: 10px;">Name</label><br>
+                        <input type="text" class="emailbar-1" name="name" value="{{profile['name']}}"><br>
+                    </div>
+                    <div>
+                        <label class="letter" style="margin-top: 10px;">Phone</label><br>
+                        <input type="text" class="emailbar-1" name="phone" value="{{profile['phone']}}"><br>
+                    </div>
+                    <div>
+                        <label class="letter" style="margin-top: 10px;">Email Id</label><br>
+                        <input type="email" class="emailbar-1" name="email" value="{{profile['email']}}"><br>
+                    </div>
+
+                    <div>
+                        <label class="letter" style="margin-top: 10px;">Address</label><br>
+                        <input type="text" class="emailbar-1" name="address" value="{{profile['address']}}"><br>
+                    </div>
+                    <div>
+                        <h3><button style="margin-top: 20px;padding: 10px;
+                        padding-left: 15px;
+                        padding-right: 15px;" href="#">Update</button></h3>
+                    </div>
+
+
+                </form>
+                {% endif %}
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="bottom">
+        <p>copyright © Desiged and Deployed by Manoj Nagarajan Email: manojnagarajan355.gmail.com </p>
+    </div>
+
+</body>
+
+</html>

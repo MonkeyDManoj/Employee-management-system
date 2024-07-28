@@ -1,0 +1,88 @@
+{% from 'alllink.html' import alllinks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dashboard.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='date.png')}}">
+</head>
+
+<body>
+    <div class="background">
+        <div class="logo">
+            <div class="links">
+                {{ alllinks() }}
+            </div>
+        </div>
+
+        <div class="page">
+
+            <div class='page2'>
+                {% if user %}
+                <h3>User : {{user['name']}}</h3>
+                <h4><a href="{{url_for('logout')}}">Logout</a></h4>
+                {% endif %}
+            </div>
+
+
+        </div>
+        <div>
+            <div class="page1">
+                <h4><a href="{{url_for('dashboard')}}">View All Employee</a></h4>
+                <h4><a href="{{url_for('addnewemployee')}}">Add New Employee</a></h4>
+            </div>
+            <div class="all-employee">
+                <caption>
+                    <h3 style="padding-bottom: 10px;">LIST OF ALL EMPLOYEES</h3>
+                </caption>
+                <hr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                            <th>View Full Profile</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for i in info %}
+                        <tr>
+                            <th scope="row">{{ i['empid'] }}</th>
+                            <td>{{ i['name'] }}</td>
+                            <td>{{ i['phone'] }}</td>
+                            <td>{{ i['email'] }}</td>
+                            <td>{{ i['address' ]}}</td>
+                            <td><a href="{{url_for('fetchone' , eid = i['empid'])}}"><button>Update</button></a></td>
+                            <td><a href="{{url_for('delete' , eid = i['empid'])}}"><button>Delete</button></a></td>
+                            <td><a href="{{url_for('singleemployee' , eid = i['empid'])}}"><button>View Full
+                                        Profile</button></a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div>
+            <p>copyright © Desiged and Deployed by Manoj Nagarajan Email: manojnagarajan355.gmail.com
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

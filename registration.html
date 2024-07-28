@@ -1,0 +1,76 @@
+{% from 'alllink.html' import alllinks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Register</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='home1.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='date.png')}}">
+</head>
+
+<body style="color: rgb(127, 147, 245);">
+    <div class="background">
+        <div class="logo">
+
+            <div class="links">
+                {{ alllinks() }}
+            </div>
+        </div>
+
+        <div class="home">
+            <h4><a href="{{url_for('home')}}">Home</a></h4>
+        </div>
+        <div class="login-1">
+            <h4><a href="{{url_for('login')}}">Login</a></h4>
+        </div>
+        <div class="register">
+            <h4 ><a href="{{url_for('register')}}">Register</a></h4>
+        </div>
+
+
+
+        <div class="page">
+            <div>
+           
+                <div class='page1'>
+                    {% if user %}
+                    <h3>User : {{user['name']}}</h3>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+
+        <div class='login'>
+            <h3 class="lable-l" style="display: inline-block;">Registration Form </h3>
+            {% if ris_error %}<p style="color: red;"> {{ ris_error }} </p>{% endif %}
+
+            <form action="/register" method="post">
+
+
+                <hr style="margin-bottom: 20px;">
+                <label class="lable-l" style="margin-top: 20px;">Email address / Username</label><br>
+                <input type="text" class="emailbar " name="name">
+                <br>
+
+                <label class="lable-l">Password</label><br>
+                <input  type="password" class="emailbar " name="password"><br>
+                <button class="button-r-l" type="submit">Register</button></a>
+
+            </form>
+        </div>
+
+    
+    </div>
+
+    <div class="bottom">
+        <p>copyright © Desiged and Deployed by Manoj Nagarajan Email: manojnagarajan355.gmail.com </p>
+    </div>
+
+
+
+</body>
+
+</html>

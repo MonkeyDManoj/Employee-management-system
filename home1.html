@@ -1,0 +1,63 @@
+{% from 'alllink.html' import alllinks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System Home</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='home1.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='date.png')}}">
+</head>
+
+<body ></body>
+    <div class="background">
+        <div class="logo">
+           
+            <div class="links">
+                {{ alllinks() }}
+
+            </div>
+        </div>
+
+        <div class="home">
+            <h4><a href="{{url_for('home')}}">Home</a></h4>
+        </div>
+        <div class="login-1">
+            <h4><a href="{{url_for('login')}}">Login</a></h4>
+        </div>
+        <div class="register">
+            <h4 ><a href="{{url_for('register')}}">Register</a></h4>
+        </div>
+
+
+
+        <div class="page">
+
+
+            <div class='page1'>
+                <div class="inside">
+                    {% if user %}
+                    <h3>User : {{user['name']}}</h3>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+        <div class="main">
+
+            <h1>Employee</h1><br>
+            <h1>Management</h1><br>
+            <h1>System</h1>
+
+        </div>
+
+    </div>
+
+    <div class="bottom">
+        <p>copyright © Desiged and Deployed by Manoj Nagarajan Email: manojnagarajan355.gmail.com </p>
+    </div>
+
+</body>
+
+</html>

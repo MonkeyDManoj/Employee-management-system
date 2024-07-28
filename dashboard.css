@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    padding: 10px;
+    margin-left: 20px
+}
+
+.links {
+    margin-left: 70%;
+    margin-top: 20px;
+
+}
+
+.links ul li {
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
+    color: #FB9D98;
+
+}
+
+.links ul li a {
+    color: #FACCB0;
+}
+
+.links ul li :hover {
+    color: #FE4166;
+
+}
+
+.links-1 ul li {
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
+    color: #FB9D98;
+
+}
+
+.links-1 ul li a {
+    color: #84AF9B;
+}
+
+.links-1 ul li :hover {
+    color: #FE4166;
+}
+
+.links-1 {
+    margin-left: 70%;
+    margin-top: 20px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    padding: 20px;
+}
+
+.page2 {
+    display: inline-block;
+}
+
+.page2 h3,
+.page2 a {
+    color: #FE4166;
+}
+
+.page2 h3,
+h4 {
+    margin-left: 900px;
+}
+
+.page2 h2 {
+    color: #84AF9B;
+    position: absolute;
+    left: 40px;
+    top: 250px
+}
+
+.main {
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.bottom p {
+    background: linear-gradient(to right, #FE4166, #84AF9B);
+    color: purple;
+    text-align: center;
+    font-size: small;
+    padding: 10px;
+
+}
+
+.login h3 {
+    margin-bottom: 10px;
+}
+
+.page1 {
+    display: flex;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+}
+
+.page1 a {
+    color: #FE4166;
+}
+
+.page1 h4 {
+    flex-grow: 1;
+    background-color: #84AF9B;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 0.5px;
+    margin-left: 0.5px;
+    border-radius: 5px;
+}
+
+.all-employee {
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #FB9D98;
+}
+
+.all-employee h3 {
+    color: #FE4166;
+
+}
+
+th,
+td {
+    margin-right: 50px;
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+button {
+    background-color: rgb(127, 216, 245);
+    color: rgb(245, 127, 227);
+    padding: 2px;
+    border-color: rgb(78, 163, 237);
+}
+
+.background {
+    background: url(background.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+button {
+    background-color: #84AF9B;
+    color: #FE4166;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 20px;
+
+
+}
+
+button:hover {
+    background-color: #FE4166;
+    color: #FACCB0;
+    transition: 0.4s;
+}
+
+.background-1 {
+    background: url(updateemp.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+.login-1 {
+    padding: 40px;
+    margin-left: 310px;
+    margin-right: 60px;
+    background-color: aliceblue;
+    display: inline-block;
+    border-radius: 25px;
+    width: 400px;
+
+
+}
+
+.background-u {
+    background: url(addnewemp.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+.box-main {
+    margin-left: 200px;
+}
+
+.letter {
+    color: #84AF9B;
+    margin-top: 20px;
+}
+
+.emailbar-1 {
+    padding-right: 180px;
+    ;
+}
